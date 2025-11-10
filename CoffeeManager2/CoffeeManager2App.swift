@@ -6,12 +6,19 @@
 //
 
 import SwiftUI
+import FirebaseCore
+import FirebaseFirestore
 
 @main
 struct CoffeeManager2App: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
+    
+    init() {
+            FirebaseApp.configure()
         }
-    }
+    
+    var body: some Scene {
+            WindowGroup {
+                ContentView()
+            }
+        }
 }
