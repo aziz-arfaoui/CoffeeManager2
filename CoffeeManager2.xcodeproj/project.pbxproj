@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		405922782EC3BED90071D958 /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 405922772EC3BED90071D958 /* FirebaseFirestoreCombine-Community */; };
 		4068136C2EC2A6A800C59C26 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 4068136B2EC2A6A800C59C26 /* FirebaseAuth */; };
 		4068136E2EC2A6A800C59C26 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 4068136D2EC2A6A800C59C26 /* FirebaseCore */; };
 		406813702EC2A6A800C59C26 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 4068136F2EC2A6A800C59C26 /* FirebaseDatabase */; };
@@ -34,6 +35,7 @@
 				406813702EC2A6A800C59C26 /* FirebaseDatabase in Frameworks */,
 				406813722EC2A6A800C59C26 /* FirebaseFirestore in Frameworks */,
 				4068136E2EC2A6A800C59C26 /* FirebaseCore in Frameworks */,
+				405922782EC3BED90071D958 /* FirebaseFirestoreCombine-Community in Frameworks */,
 				406813742EC2A6A800C59C26 /* FirebaseStorage in Frameworks */,
 				4068136C2EC2A6A800C59C26 /* FirebaseAuth in Frameworks */,
 			);
@@ -83,6 +85,7 @@
 				4068136F2EC2A6A800C59C26 /* FirebaseDatabase */,
 				406813712EC2A6A800C59C26 /* FirebaseFirestore */,
 				406813732EC2A6A800C59C26 /* FirebaseStorage */,
+				405922772EC3BED90071D958 /* FirebaseFirestoreCombine-Community */,
 			);
 			productName = CoffeeManager2;
 			productReference = 406813512EC29A2F00C59C26 /* CoffeeManager2.app */;
@@ -366,6 +369,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		405922772EC3BED90071D958 /* FirebaseFirestoreCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4068136A2EC2A6A800C59C26 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreCombine-Community";
+		};
 		4068136B2EC2A6A800C59C26 /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 4068136A2EC2A6A800C59C26 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

@@ -1,21 +1,16 @@
-//
-//  StaffListView.swift
-//  CoffeeManager2
-//
-//  Created by Aziz Arfaoui on 11/11/2025.
-//
-
-
 import SwiftUI
 
 struct StaffListView: View {
     @StateObject var viewModel = StaffViewModel()
+    @State private var showingAddSheet = false
 
     var body: some View {
         NavigationStack {
             List {
                 ForEach(viewModel.staffList) { staff in
-                    NavigationLink(staff.name, destination: StaffDetailView(staff: staff))
+                    NavigationLink(staff.name) {
+                        StaffDetailView(viewModel: viewModel, staff: staff)
+                    }
                 }
                 .onDelete { indexSet in
                     indexSet.forEach { i in
@@ -28,12 +23,13 @@ struct StaffListView: View {
             .navigationTitle("Staff")
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button("Add") {
-                        // present a form to add staff
-                    }
+                    Button("Add") { showingAddSheet = true }
                 }
             }
             .onAppear { viewModel.fetchStaff() }
+            .sheet(isPresented: $showingAddSheet) {
+                AddStaffView(viewModel: viewModel)
+            }
         }
     }
 }
